@@ -6,15 +6,6 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-def sumargs(*args):
-    """Compute the sum of the arguments."""
-    return sum(args)
-
-
-# def multiples(limit, *args):
-#     sorted(args, reverse=True)
-
-
-def multiples(base=1, limit=10):
-    """Compute multiples of base up to limit."""
-    return list(range(0, limit, base))
+def summults(f1, f2, lim):
+    """Find the sum of all the multipls of f1 or f2 below lim."""
+    return sum(set(range(0, lim, f1)) | set(range(0, lim, f2)))
