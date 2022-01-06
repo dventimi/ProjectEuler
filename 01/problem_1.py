@@ -6,6 +6,9 @@
 # Find the sum of all the multiples of 3 or 5 below 1000.
 
 
-def summults(f1, f2, lim):
-    """Find the sum of all the multipls of f1 or f2 below lim."""
-    return sum(set(range(0, lim, f1)) | set(range(0, lim, f2)))
+def summults(lim, *m):
+    """Find the sum of all the multiples of f1 or f2 below l."""
+    y = set()
+    for f in m:
+        y = y | set(range(0, lim, f))
+    return sum(y)
